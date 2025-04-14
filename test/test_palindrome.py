@@ -2,7 +2,8 @@ import unittest
 from src.palindrome import is_palindrome
 
 class TestEsPalindromo(unittest.TestCase):
-    def test_palindromos(self):
+
+    def test_simple_palindromes(self):
         self.assertTrue(is_palindrome('radar'))  
         self.assertTrue(is_palindrome('anilina')) 
         self.assertTrue(is_palindrome('reconocer'))
@@ -23,6 +24,14 @@ class TestEsPalindromo(unittest.TestCase):
         self.assertTrue(is_palindrome('trabajo'))
         self.assertTrue(is_palindrome('gato'))
        
+
+    def test_edge_palindrome(self):
+        self.assertTrue(is_palindrome(''))
+        self.assertTrue(is_palindrome('a'))
+        self.assertTrue(is_palindrome('A'))
+        self.assertTrue(is_palindrome('aa'))
+        self.assertTrue(is_palindrome('7'))
+
 
 if __name__ == '__main__':
     unittest.main()
