@@ -1,10 +1,5 @@
 import unittest
-
 from src.palindrome import is_palindrome
-
-class TestEsPalindromo(unittest.TestCase):
-
-    def test_simple_palindromes(self):
 
 class TestEsPalindromo(unittest.TestCase):
     def test_palindromos(self):
@@ -20,9 +15,15 @@ class TestEsPalindromo(unittest.TestCase):
         self.assertTrue(is_palindrome('a mama Roma le aviva el amor a mama'))
         self.assertTrue(is_palindrome('Madam, Im Adam'))
         self.assertTrue(is_palindrome('race a car'))
-        
-
-
+    
+    def test_not_palindrome(self):
+        self.assertTrue(is_palindrome('universidad'))
+        self.assertTrue(is_palindrome('silla'))
+        self.assertTrue(is_palindrome('computadora'))
+        self.assertTrue(is_palindrome('trabajo'))
+        self.assertTrue(is_palindrome('gato'))
+       
 
 if __name__ == '__main__':
     unittest.main()
+
