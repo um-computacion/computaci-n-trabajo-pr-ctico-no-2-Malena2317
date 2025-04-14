@@ -1,9 +1,11 @@
+import re  #divide , reemplaza o buscra usando patrones en textos
 
 def is_palindrome(s):
-    return s == s[::-1] # invierte un strig los compara y si es igual es palindromo
+    cleaned = re.sub(r'[^a-zA-Z0-9]', '', s).lower() # elimina todo lo que no sea una palabra o numero y lo escribe en miniscula 
+    return cleaned == cleaned[::-1] #compara con su reverso
+
 
 if __name__ == "__main__":
-    
     
     entrada = input("Ingresá una palabra o frase: ")
     if is_palindrome(entrada):
