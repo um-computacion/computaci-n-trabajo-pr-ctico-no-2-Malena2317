@@ -1,9 +1,13 @@
 import unittest
+
 from src.palindrome import is_palindrome
 
 class TestEsPalindromo(unittest.TestCase):
 
     def test_simple_palindromes(self):
+
+class TestEsPalindromo(unittest.TestCase):
+    def test_palindromos(self):
         self.assertTrue(is_palindrome('radar'))  
         self.assertTrue(is_palindrome('anilina')) 
         self.assertTrue(is_palindrome('reconocer'))
@@ -19,6 +23,6 @@ class TestEsPalindromo(unittest.TestCase):
         
 
 
+
 if __name__ == '__main__':
     unittest.main()
-
