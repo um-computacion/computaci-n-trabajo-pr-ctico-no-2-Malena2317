@@ -24,13 +24,13 @@ class TestEsPalindromo(unittest.TestCase):
         self.assertTrue(is_palindrome('trabajo'))
         self.assertTrue(is_palindrome('gato'))
        
+
     def test_edge_palindrome(self):
         self.assertTrue(is_palindrome(''))
         self.assertTrue(is_palindrome('a'))
         self.assertTrue(is_palindrome('A'))
         self.assertTrue(is_palindrome('aa'))
         self.assertTrue(is_palindrome('7'))
-
 
 
 if __name__ == '__main__':
